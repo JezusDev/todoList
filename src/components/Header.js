@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header({ count }) {
+function Header({ count, setIsStarted }) {
   return (
     <header className="flex justify-between items-center py-8 px-12 mb-24">
       <div className="person flex items-center text-2xl">
@@ -16,7 +16,10 @@ function Header({ count }) {
       </div>
 
       <div>
-        <button className="text-2xl font-bold text-pink-500 hover:text-pink-400 transition-all">
+        <button
+          onClick={() => setIsStarted(false)}
+          className="text-2xl font-bold text-pink-500 hover:text-pink-400 transition-all"
+        >
           Logout
         </button>
       </div>
